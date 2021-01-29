@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Left : MonoBehaviour
+public class Right : MonoBehaviour
 {
     public Animation chosenAnimation;
     public ItemSO item;
-    public TraitSO trait;
-    public Left (Animation anim, ItemSO it, TraitSO tr)
+    public AnimalSO animal;
+    public Right (Animation anim, ItemSO it, AnimalSO ani)
     {
         chosenAnimation = anim;
         item = it;
-        trait = tr;
+        animal = ani;
     }
 }

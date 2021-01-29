@@ -40,6 +40,8 @@ public class ResourceLoader : MonoBehaviour
     {
         return animals[Random.Range(0, animals.Length - 1)];
     }
+
+
     public ItemSO getRandomItem()
     {
         return items[Random.Range(0, items.Length - 1)];
