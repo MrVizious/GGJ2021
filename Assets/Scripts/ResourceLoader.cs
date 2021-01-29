@@ -36,8 +36,12 @@ public class ResourceLoader : MonoBehaviour
         items = (ItemSO[])Resources.LoadAll("ScriptableObjects/Items");
     }
 
-    public AnimalSO GetRandomAnimal()
+    public AnimalSO getRandomAnimal()
     {
-        return null;
+        return animals[Random.Range(0, animals.Length - 1)];
+    }
+    public ItemSO getRandomItem()
+    {
+        return items[Random.Range(0, items.Length - 1)];
     }
 }
