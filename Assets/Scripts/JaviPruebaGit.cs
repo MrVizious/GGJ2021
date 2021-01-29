@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PruebaGit : MonoBehaviour
+public class JaviPruebaGit : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
