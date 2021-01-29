@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
+    public int initialCombinations = 10;
     private List<Left> leftList;
     private List<Right> rightList;
     //private int leftIndex, rightIndex = 0;
@@ -15,7 +16,7 @@ public class LevelController : MonoBehaviour
         rightList = new List<Right>();
 
         loader = ResourceLoader.Instance;
-        for(int count=0; count<10;count++)
+        for(int count=0; count<initialCombinations;count++)
         {
             AddCombination();
         }    
