@@ -8,6 +8,5 @@ public class MiscTester : MonoBehaviour
     private void Start()
     {
         loader = ResourceLoader.Instance;
-        loader.Test();
     }
 }
