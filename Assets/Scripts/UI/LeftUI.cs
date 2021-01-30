@@ -10,11 +10,12 @@ public class LeftUI : MonoBehaviour
     public Image traitImage;
     public Animator animator;
 
-    private AnimatorOverrideController animatorOverride;
+    private AnimatorOverrideController animatorOverrideController;
 
     private void Start()
     {
-
+        animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
+        animator.runtimeAnimatorController = animatorOverrideController;
     }
     public void UpdateGraphics()
     {
@@ -22,11 +23,15 @@ public class LeftUI : MonoBehaviour
         Left currentLeft = data.getCurrentLeft();
         itemImage.sprite = currentLeft.item.sprite;
         traitImage.sprite = currentLeft.trait.sprite;
+        SetClip(currentLeft.chosenAnimation);
     }
 
     private void SetClip(AnimationClip newClip)
     {
-
+        if (!animatorOverrideController["LeftIdle"].Equals(newClip))
+        {
+            animatorOverrideController["LeftIdle"] = newClip;
+        }
     }
 
 

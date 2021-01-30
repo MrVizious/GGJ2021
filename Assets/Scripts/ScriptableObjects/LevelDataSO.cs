@@ -7,12 +7,13 @@ using UnityEngine.Events;
 public class LevelDataSO : ScriptableObject
 {
     public UnityEvent onLeftIndexUpdated, onRightIndexUpdated, onCorrectMatch, onWrongMatch, onStorageUpdate;
-    private List<Left> leftList;
-    private List<Right> rightList;
+    public List<Left> leftList;
+    public List<Right> rightList;
     private int leftIndex, rightIndex = 0;
     private Left[] storaged;
 
-    private void Awake()
+
+    public void Setup()
     {
         leftList = new List<Left>();
         rightList = new List<Right>();
@@ -20,16 +21,16 @@ public class LevelDataSO : ScriptableObject
     }
 
 
+
     public bool AddCombination(AnimalSO leftAnimal, AnimalSO rightAnimal, ItemSO item)
     {
-
-
 
         if (leftAnimal.Equals(rightAnimal))
         {
             return false;
         }
 
+        Debug.Log("Adding animals");
         AnimationClip animLeft = leftAnimal.getRandomAnimation();
         TraitSO trait = rightAnimal.getRandomTrait();
 
@@ -43,7 +44,24 @@ public class LevelDataSO : ScriptableObject
         if (rightList.IndexOf(objectRight) >= 0) return false;
 
 
-        if (rightList.Count == 0)
+        if (leftList == null)
+        {
+            leftList = new List<Left>();
+        }
+        else if (leftList.Count == 0)
+        {
+            leftList.Add(objectLeft);
+        }
+        else
+        {
+            leftList.Insert(Random.Range(0, rightList.Count - 1), objectLeft);
+        }
+
+        if (rightList == null)
+        {
+            rightList = new List<Right>();
+        }
+        else if (rightList.Count == 0)
         {
             rightList.Add(objectRight);
         }
@@ -56,10 +74,33 @@ public class LevelDataSO : ScriptableObject
 
     }
 
+    public void AddCombinationWithoutChecking(AnimalSO leftAnimal, AnimalSO rightAnimal, ItemSO item)
+    {
+
+        Debug.Log("Adding animals without checking");
+        AnimationClip animLeft = leftAnimal.getRandomAnimation();
+        TraitSO trait = rightAnimal.getRandomTrait();
+
+        Left objectLeft = new Left(animLeft, item, trait);
+
+        //Creation object right/receiver
+        AnimationClip animRight = rightAnimal.getRandomAnimation();
+
+        Right objectRight = new Right(animRight, item, rightAnimal);
+
+        AddToLeft(objectLeft);
+        AddToRight(objectRight);
+
+    }
+
     private void AddToLeft(Left newLeft)
     {
         //Addition to lists, index random
-        if (leftList.Count == 0)
+        if (leftList == null)
+        {
+            leftList = new List<Left>();
+        }
+        else if (leftList.Count == 0)
         {
             leftList.Add(newLeft);
         }
@@ -115,8 +156,10 @@ public class LevelDataSO : ScriptableObject
 
     public bool Match(int storageIndex)
     {
-        // Does the trait and item on the left match the trait and item of the right?
-        // TODO: Delete both, left from storage and right from list
+        if (storaged == null)
+        {
+            storaged = new Left[2];
+        }
         TraitSO traitLeft = storaged[storageIndex].trait;
         ItemSO itemLeft = storaged[storageIndex].item;
 

@@ -9,6 +9,10 @@ public class LevelController : MonoBehaviour
     public int maxNumberOfTries = 10;
     private ResourceLoader loader;
 
+    private void Awake()
+    {
+        data.Setup();
+    }
     void Start()
     {
         loader = ResourceLoader.Instance;
@@ -16,6 +20,7 @@ public class LevelController : MonoBehaviour
         {
             AddCombination();
         }
+        Debug.Log("Number of combinations = " + data.leftList.Count);
     }
 
     public void AddCombination()
@@ -27,6 +32,7 @@ public class LevelController : MonoBehaviour
             AnimalSO animalRight = loader.getRandomAnimal();
             AnimalSO animalLeft = loader.getRandomAnimal();
             added = data.AddCombination(animalLeft, animalRight, item);
+            if (!added && count == maxNumberOfTries - 1) data.AddCombinationWithoutChecking(animalLeft, animalRight, item);
         }
     }
 }
