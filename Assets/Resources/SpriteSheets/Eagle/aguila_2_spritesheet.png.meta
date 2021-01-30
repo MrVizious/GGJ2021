@@ -14,6 +14,9 @@ TextureImporter:
   - first:
       213: -3718730395308417410
     second: aguila_2_spritesheet_3
+  - first:
+      213: -6075651532210349171
+    second: aguila_2_spritesheet_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -44,7 +47,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -58,7 +61,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 72
+  spritePixelsToUnits: 132
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,18 +102,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -120,7 +111,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 596
+        width: 592.6
         height: 620
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -139,9 +130,9 @@ TextureImporter:
       name: aguila_2_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 596
+        x: 592
         y: 0
-        width: 596
+        width: 592.6
         height: 620
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -160,9 +151,9 @@ TextureImporter:
       name: aguila_2_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 1192
+        x: 1184
         y: 0
-        width: 596
+        width: 592.6
         height: 620
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -181,9 +172,9 @@ TextureImporter:
       name: aguila_2_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 1788
+        x: 1776
         y: 0
-        width: 596
+        width: 592.6
         height: 620
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -194,6 +185,27 @@ TextureImporter:
       bones: []
       spriteID: e7e913c786a646cc0800000000000000
       internalID: -3718730395308417410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aguila_2_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 0
+        width: 592.6
+        height: 620
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b5b832f13feaba0800000000000000
+      internalID: -6075651532210349171
       vertices: []
       indices: 
       edges: []
