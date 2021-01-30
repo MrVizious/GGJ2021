@@ -46,7 +46,7 @@ public class ResourceLoader : MonoBehaviour
 
     public AnimalSO getRandomAnimal()
     {
-        return animals[Random.Range(0, animals.Length - 1)];
+        return animals[Random.Range(0, animals.Length)];
     }
 
 
@@ -54,6 +54,6 @@ public class ResourceLoader : MonoBehaviour
     {
         if (items == null) Debug.Log("Items is null!");
         else if (items.Length == 0) Debug.Log("Items is empty!");
-        return items[Random.Range(0, items.Length - 1)];
+        return items[Random.Range(0, items.Length)];
     }
 }

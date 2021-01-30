@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,8 +14,6 @@ public class LeftUI : MonoBehaviour
 
     private void Start()
     {
-        animatorOverrideController = new AnimatorOverrideController(animalAnimator.runtimeAnimatorController);
-        animalAnimator.runtimeAnimatorController = animatorOverrideController;
         UpdateGraphics();
     }
     public void UpdateGraphics()
@@ -27,18 +27,27 @@ public class LeftUI : MonoBehaviour
 
     private void SetClip(AnimationClip newClip)
     {
+        animatorOverrideController = new AnimatorOverrideController(animalAnimator.runtimeAnimatorController);
         AnimationClip currentClip = animatorOverrideController["LeftIdle"];
-        Debug.Log("Current clip is: " + currentClip);
-        Debug.Log("New clip is: " + newClip);
+        Debug.Log(currentClip == null);
+        Debug.Log("Newclip: " + newClip);
 
+        // if (currentClip == null || !currentClip.Equals(newClip))
+        // {
+        //     Debug.Log("Changing");
+        // }
+        // animatorOverrideController["LeftIdle"] = newClip;
+        // animalAnimator.runtimeAnimatorController = animatorOverrideController;
 
-
-        bool areEqual = (!animatorOverrideController["LeftIdle"].Equals(newClip));
-        if (!areEqual)
+        if (newClip)
         {
-            animatorOverrideController["LeftIdle"] = newClip;
+            AnimatorOverrideController aoc = new AnimatorOverrideController(animalAnimator.runtimeAnimatorController);
+            var anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
+            foreach (var a in aoc.animationClips)
+                anims.Add(new KeyValuePair<AnimationClip, AnimationClip>(a, newClip));
+            aoc.ApplyOverrides(anims);
+            animalAnimator.runtimeAnimatorController = aoc;
         }
-        Debug.Log("Got here");
     }
 
 

@@ -7,7 +7,9 @@ using UnityEngine.Events;
 public class LevelDataSO : ScriptableObject
 {
     public UnityEvent onLeftIndexUpdated, onRightIndexUpdated, onCorrectMatch, onWrongMatch, onStorageUpdate;
+    [SerializeField]
     private List<Left> leftList;
+    [SerializeField]
     private List<Right> rightList;
     private int leftIndex, rightIndex = 0;
     private Left[] storaged;
@@ -31,7 +33,6 @@ public class LevelDataSO : ScriptableObject
             return false;
         }
 
-        Debug.Log("Adding animals");
         AnimationClip animLeft = leftAnimal.getRandomAnimation();
         TraitSO trait = rightAnimal.getRandomTrait();
 
