@@ -6,7 +6,7 @@ using UnityEngine.Events;
 [CreateAssetMenu(fileName = "LevelData", menuName = "ScriptableObjects/LevelData", order = 1)]
 public class LevelDataSO : ScriptableObject
 {
-    public UnityEvent onLeftIndexUpdated, onRightIndexUpdated, onCorrectMatch, onWrongMatch;
+    public UnityEvent onLeftIndexUpdated, onRightIndexUpdated, onCorrectMatch, onWrongMatch, onStorageUpdate;
     private List<Left> leftList;
     private List<Right> rightList;
     private int leftIndex, rightIndex = 0;
@@ -143,30 +143,33 @@ public class LevelDataSO : ScriptableObject
         if (conditionMatch)
         {
             onCorrectMatch.Invoke();
-            return true;
         }
         else
         {
             onWrongMatch.Invoke();
-            return false;
         }
 
-
+        //Delete left and right
+        RemoveFromStorage(storageIndex);
+        RemoveFromRigth(rightList[rightIndex]);
+        return conditionMatch;
     }
 
     public void StorageAction(int storageIndex)
     {
         // If the storage index is full, match
         // if not, storage current left instance and update shit
-        if(storaged[storageIndex] != null)
+        // TODO : Invoke event updating storage graphics 
+        if (storaged[storageIndex] != null)
         {
             Match(storageIndex);
-        } 
+        }
         else
         {
-            storaged[storageIndex] =  leftList[leftIndex];
+            storaged[storageIndex] = leftList[leftIndex];
             RemoveFromLeft(leftList[leftIndex]);
-        }   
+        }
+        onStorageUpdate.Invoke();
 
     }
 
@@ -175,6 +178,11 @@ public class LevelDataSO : ScriptableObject
         return (x % m + m) % m;
     }
 
+
+    public void RemoveFromStorage(int indexStorage)
+    {
+        storaged[indexStorage] = null;
+    }
     public void RemoveFromLeft(Left leftToRemove)
     {
         leftList.Remove(leftToRemove);
