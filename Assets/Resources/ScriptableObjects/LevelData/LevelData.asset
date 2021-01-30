@@ -27,3 +27,65 @@ MonoBehaviour:
   onStorageUpdate:
     m_PersistentCalls:
       m_Calls: []
+  leftList:
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    trait: {fileID: 11400000, guid: 4f5ae89c890eef8239956ae1d35faab6, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    trait: {fileID: 11400000, guid: 4f5ae89c890eef8239956ae1d35faab6, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    trait: {fileID: 11400000, guid: 4f5ae89c890eef8239956ae1d35faab6, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    trait: {fileID: 11400000, guid: 4f5ae89c890eef8239956ae1d35faab6, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    trait: {fileID: 11400000, guid: 4f5ae89c890eef8239956ae1d35faab6, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    trait: {fileID: 11400000, guid: 4f5ae89c890eef8239956ae1d35faab6, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    trait: {fileID: 11400000, guid: 4f5ae89c890eef8239956ae1d35faab6, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    trait: {fileID: 11400000, guid: 4f5ae89c890eef8239956ae1d35faab6, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    trait: {fileID: 11400000, guid: 4f5ae89c890eef8239956ae1d35faab6, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    trait: {fileID: 11400000, guid: 4f5ae89c890eef8239956ae1d35faab6, type: 2}
+  rightList:
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    animal: {fileID: 11400000, guid: d6ce0cef54aab7eafb3082baf18360b0, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    animal: {fileID: 11400000, guid: d6ce0cef54aab7eafb3082baf18360b0, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    animal: {fileID: 11400000, guid: d6ce0cef54aab7eafb3082baf18360b0, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    animal: {fileID: 11400000, guid: d6ce0cef54aab7eafb3082baf18360b0, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    animal: {fileID: 11400000, guid: d6ce0cef54aab7eafb3082baf18360b0, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    animal: {fileID: 11400000, guid: d6ce0cef54aab7eafb3082baf18360b0, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    animal: {fileID: 11400000, guid: d6ce0cef54aab7eafb3082baf18360b0, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    animal: {fileID: 11400000, guid: d6ce0cef54aab7eafb3082baf18360b0, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    animal: {fileID: 11400000, guid: d6ce0cef54aab7eafb3082baf18360b0, type: 2}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    animal: {fileID: 11400000, guid: d6ce0cef54aab7eafb3082baf18360b0, type: 2}

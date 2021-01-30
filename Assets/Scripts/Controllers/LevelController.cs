@@ -20,7 +20,6 @@ public class LevelController : MonoBehaviour
         {
             AddCombination();
         }
-        Debug.Log("Number of combinations = " + data.leftList.Count);
     }
 
     public void AddCombination()

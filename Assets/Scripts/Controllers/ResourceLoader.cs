@@ -39,9 +39,9 @@ public class ResourceLoader : MonoBehaviour
     private void LoadResources()
     {
         animals = Resources.LoadAll<AnimalSO>("ScriptableObjects/Animals");
-        Debug.Log("Animals size = " + animals.Length);
+        Debug.Log("Total amount of animals = " + animals.Length);
         items = Resources.LoadAll<ItemSO>("ScriptableObjects/Items/");
-        Debug.Log("Items size = " + animals.Length);
+        Debug.Log("Total amount of items = " + animals.Length);
     }
 
     public AnimalSO getRandomAnimal()
