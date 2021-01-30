@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5ae0357b664a9154b5204f2e4aac7f6, type: 3}
-  m_Name: Tiger
+  m_Name: Shark
   m_EditorClassIdentifier: 
-  animalName: Tiger
+  animalName: Shark
   traits:
-  - {fileID: 11400000, guid: af61e379bc4170a4b9fd23facb659098, type: 2}
+  - {fileID: 11400000, guid: d798904608f65e44a994966db2ba2cef, type: 2}
   - {fileID: 11400000, guid: 5acd35a09ef49e34d98481d2bb02da92, type: 2}
   animations:
-  - {fileID: 7400000, guid: de1347bdd6483d149b7783b9bb5cd673, type: 2}
+  - {fileID: 7400000, guid: da640e5204d4252499f51be7abd6535c, type: 2}

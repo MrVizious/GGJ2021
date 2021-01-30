@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9fdf59da267382390874e48e0582ff16, type: 3}
-  m_Name: Heavy
+  m_Name: Drunk
   m_EditorClassIdentifier: 
-  traitName: Heavy
-  sprite: {fileID: 3084560779980381455, guid: b60f6a82d8e00ce4da477ef72b84257a, type: 3}
+  traitName: Drunk
+  sprite: {fileID: 6618675406181069006, guid: b60f6a82d8e00ce4da477ef72b84257a, type: 3}

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5ae0357b664a9154b5204f2e4aac7f6, type: 3}
-  m_Name: Tiger
+  m_Name: Chicken
   m_EditorClassIdentifier: 
-  animalName: Tiger
+  animalName: Chicken
   traits:
-  - {fileID: 11400000, guid: af61e379bc4170a4b9fd23facb659098, type: 2}
-  - {fileID: 11400000, guid: 5acd35a09ef49e34d98481d2bb02da92, type: 2}
+  - {fileID: 11400000, guid: 22c78ffa40675784ea3277e47d969c66, type: 2}
+  - {fileID: 11400000, guid: 37ae84b5b6684834cb2aa197eccb8626, type: 2}
   animations:
-  - {fileID: 7400000, guid: de1347bdd6483d149b7783b9bb5cd673, type: 2}
+  - {fileID: 7400000, guid: 44921420799de0941a51d802eb095a6c, type: 2}
