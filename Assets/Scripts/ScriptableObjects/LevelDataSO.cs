@@ -156,12 +156,34 @@ public class LevelDataSO : ScriptableObject
 
     public void StorageAction(int storageIndex)
     {
-        // TODO: If the storage index is full, match
+        // If the storage index is full, match
         // if not, storage current left instance and update shit
+        if(storaged[storageIndex] != null)
+        {
+            Match(storageIndex);
+        } 
+        else
+        {
+            storaged[storageIndex] =  leftList[leftIndex];
+            RemoveFromLeft(leftList[leftIndex]);
+        }   
+
     }
 
     public int mod(int x, int m)
     {
         return (x % m + m) % m;
+    }
+
+    public void RemoveFromLeft(Left leftToRemove)
+    {
+        leftList.Remove(leftToRemove);
+        RotateLeft(-1);
+    }
+
+    public void RemoveFromRigth(Right rigthToRemove)
+    {
+        rightList.Remove(rigthToRemove);
+        RotateRight(-1);
     }
 }
