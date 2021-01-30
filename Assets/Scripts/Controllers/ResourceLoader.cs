@@ -5,7 +5,9 @@ using UnityEngine;
 public class ResourceLoader : MonoBehaviour
 {
 
+    [SerializeField]
     private static AnimalSO[] animals;
+    [SerializeField]
     private static ItemSO[] items;
 
     #region SINGLETON PATTERN
@@ -30,10 +32,16 @@ public class ResourceLoader : MonoBehaviour
     }
     #endregion
 
+    private void Awake()
+    {
+        LoadResources();
+    }
     private void LoadResources()
     {
-        animals = (AnimalSO[])Resources.LoadAll("ScriptableObjects/Animals");
-        items = (ItemSO[])Resources.LoadAll("ScriptableObjects/Items");
+        animals = Resources.LoadAll<AnimalSO>("ScriptableObjects/Animals");
+        Debug.Log("Animals size = " + animals.Length);
+        items = Resources.LoadAll<ItemSO>("ScriptableObjects/Items/");
+        Debug.Log("Items size = " + animals.Length);
     }
 
     public AnimalSO getRandomAnimal()
