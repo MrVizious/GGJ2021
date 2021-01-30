@@ -17,7 +17,7 @@ public class Countdown : MonoBehaviour
 
     private void Start()
     {
-        ResetTimer();
+        ResetCountdown();
     }
 
     private void Update()
@@ -33,20 +33,20 @@ public class Countdown : MonoBehaviour
             if (remainingSeconds <= Mathf.Epsilon)
             {
                 onTimeUp.Invoke();
-                StopTimer();
+                StopCountdown();
             }
         }
     }
 
-    public void StartTimer()
+    public void StartCountdown()
     {
         setRunning(true);
     }
-    public void StopTimer()
+    public void StopCountdown()
     {
         setRunning(false);
     }
-    public void ToggleTimerRunning()
+    public void ToggleCountdownRunning()
     {
         setRunning(!running);
     }
@@ -56,7 +56,7 @@ public class Countdown : MonoBehaviour
         running = newValue;
     }
 
-    public void ResetTimer()
+    public void ResetCountdown()
     {
         remainingSeconds = maxSeconds;
         UpdatePercentage();
