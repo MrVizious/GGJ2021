@@ -10,7 +10,6 @@ public class LeftUI : MonoBehaviour
     public Image traitImage;
     public Animator animalAnimator;
 
-    private AnimatorOverrideController animatorOverrideController;
 
     private void Start()
     {
@@ -27,17 +26,8 @@ public class LeftUI : MonoBehaviour
 
     private void SetClip(AnimationClip newClip)
     {
-        animatorOverrideController = new AnimatorOverrideController(animalAnimator.runtimeAnimatorController);
-        AnimationClip currentClip = animatorOverrideController["LeftIdle"];
-        Debug.Log(currentClip == null);
-        Debug.Log("Newclip: " + newClip);
-
-        // if (currentClip == null || !currentClip.Equals(newClip))
-        // {
-        //     Debug.Log("Changing");
-        // }
-        // animatorOverrideController["LeftIdle"] = newClip;
-        // animalAnimator.runtimeAnimatorController = animatorOverrideController;
+        // TODO: Check that the new is different from the current
+        // Debug.Log("Newclip: " + newClip);
 
         if (newClip)
         {

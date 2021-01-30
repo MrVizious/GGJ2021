@@ -13,7 +13,7 @@ public class LevelController : MonoBehaviour
     {
         data.Setup();
     }
-    void Start()
+    private void OnEnable()
     {
         loader = ResourceLoader.Instance;
         for (int count = 0; count < initialCombinations; count++)

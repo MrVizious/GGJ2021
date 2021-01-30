@@ -247,6 +247,7 @@ public class LevelDataSO : ScriptableObject
 
     public Right getCurrentRight()
     {
+        Debug.Log("Size of rightlist: " + rightList.Count);
         return rightList[rightIndex];
     }
 

@@ -5,11 +5,34 @@ using UnityEngine.UI;
 
 public class RightUI : MonoBehaviour
 {
-    // public LevelDataSO data;
+    public LevelDataSO data;
     public Image itemImage;
-    public Animation animalAnimation;
+    public Animator animalAnimator;
+
+    private void Start()
+    {
+        UpdateGraphics();
+    }
     public void UpdateGraphics()
     {
-        // TODO: Update images according to data
+        // Update images according to data
+        Right currentRight = data.getCurrentRight();
+        itemImage.sprite = currentRight.item.spriteOutline;
+        SetClip(currentRight.chosenAnimation);
+    }
+    private void SetClip(AnimationClip newClip)
+    {
+        // TODO: Check that the new is different from the current
+        Debug.Log("Newclip: " + newClip);
+
+        if (newClip)
+        {
+            AnimatorOverrideController aoc = new AnimatorOverrideController(animalAnimator.runtimeAnimatorController);
+            var anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
+            foreach (var a in aoc.animationClips)
+                anims.Add(new KeyValuePair<AnimationClip, AnimationClip>(a, newClip));
+            aoc.ApplyOverrides(anims);
+            animalAnimator.runtimeAnimatorController = aoc;
+        }
     }
 }

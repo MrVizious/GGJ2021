@@ -7,4 +7,5 @@ public class ItemSO : ScriptableObject
 {
     public string itemName = "Item";
     public Sprite sprite;
+    public Sprite spriteOutline;
 }
