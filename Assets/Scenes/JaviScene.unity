@@ -563,7 +563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e40247b1e0e5b2ada4a0d4b4b8cfc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSeconds: 30
+  maxSeconds: 5
   remainingSecondsPercentage: 1
   running: 1
   onTimeUp:

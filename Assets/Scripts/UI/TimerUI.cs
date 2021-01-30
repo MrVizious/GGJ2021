@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TimerUI : MonoBehaviour
 {
     public Image image;
-    public Timer timer;
+    public Countdown timer;
 
     private void Start()
     {

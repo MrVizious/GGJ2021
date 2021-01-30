@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Timer : MonoBehaviour
+public class Countdown : MonoBehaviour
 {
     [Min(0.001f)]
     public float maxSeconds = 5f;
