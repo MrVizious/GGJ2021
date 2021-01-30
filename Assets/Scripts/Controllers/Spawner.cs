@@ -13,7 +13,7 @@ public class Spawner : MonoBehaviour
     public SpawnerLevels levels;
     public LevelUpMethod levelUpMethod;
     public Timer timer;
-    // public Score score;
+    public ScoreSO score;
 
     private int currentLevel;
     private float lastSpawnTimeStamp = 0f;
@@ -34,19 +34,24 @@ public class Spawner : MonoBehaviour
                 {
                     currentLevel++;
                 }
-                if (timer.secondsSinceStart
-                    >= lastSpawnTimeStamp + levels.levels[currentLevel].secondsBetweenSpawn)
-                {
-                    for (int i = 0; i < levels.levels[currentLevel].numberOfCombinationsToSpawn; i++)
-                    {
-                        levelController.AddCombination();
-                    }
-                }
                 break;
 
-                // TODO: Level up using score
-                //case LevelUpMethod.Score:
-                //    if
+            case LevelUpMethod.Score:
+                if (score.currentScore
+                    > levels.levels[currentLevel].maxPoint)
+                {
+                    currentLevel++;
+                }
+
+                break;
+        }
+        if (timer.secondsSinceStart
+            >= lastSpawnTimeStamp + levels.levels[currentLevel].secondsBetweenSpawn)
+        {
+            for (int i = 0; i < levels.levels[currentLevel].numberOfCombinationsToSpawn; i++)
+            {
+                levelController.AddCombination();
+            }
         }
     }
 
