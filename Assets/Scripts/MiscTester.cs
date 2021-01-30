@@ -5,18 +5,25 @@ using UnityEngine.Events;
 
 public class MiscTester : MonoBehaviour
 {
-    public UnityEvent firePressed;
+    public UnityEvent onJumpButtonDown;
+
+    private void Awake()
+    {
+        onJumpButtonDown = new UnityEvent();
+    }
+
     private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            firePressed.Invoke();
+            onJumpButtonDown.Invoke();
+            Debug.Log("Fired!");
         }
     }
 
-    public void FireAction()
+    public void ListenerAction()
     {
-        Debug.Log("Fire!");
+        Debug.Log("Jump button pressed");
     }
 
 }
