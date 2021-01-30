@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Right
 {
-    public Animation chosenAnimation;
+    public AnimationClip chosenAnimation;
     public ItemSO item;
     public AnimalSO animal;
-    public Right(Animation anim, ItemSO it, AnimalSO ani)
+    public Right(AnimationClip anim, ItemSO it, AnimalSO ani)
     {
         chosenAnimation = anim;
         item = it;

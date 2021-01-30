@@ -30,13 +30,13 @@ public class LevelDataSO : ScriptableObject
             return false;
         }
 
-        Animation animLeft = leftAnimal.getRandomAnimation();
+        AnimationClip animLeft = leftAnimal.getRandomAnimation();
         TraitSO trait = rightAnimal.getRandomTrait();
 
         Left objectLeft = new Left(animLeft, item, trait);
 
         //Creation object right/receiver
-        Animation animRight = rightAnimal.getRandomAnimation();
+        AnimationClip animRight = rightAnimal.getRandomAnimation();
         Right objectRight = new Right(animRight, item, rightAnimal);
 
         //Check that no other same animal is in right list with same item

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Left
 {
-    public Animation chosenAnimation;
+    public AnimationClip chosenAnimation;
     public ItemSO item;
     public TraitSO trait;
-    public Left(Animation anim, ItemSO it, TraitSO tr)
+    public Left(AnimationClip anim, ItemSO it, TraitSO tr)
     {
         chosenAnimation = anim;
         item = it;

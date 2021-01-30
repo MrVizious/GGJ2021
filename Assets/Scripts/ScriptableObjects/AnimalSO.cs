@@ -7,9 +7,9 @@ public class AnimalSO : ScriptableObject
 {
     public string animalName = "Animal";
     public List<TraitSO> traits;
-    public List<Animation> animations;
+    public List<AnimationClip> animations;
 
-    public Animation getRandomAnimation()
+    public AnimationClip getRandomAnimation()
     {
         return animations[Random.Range(0, animations.Count - 1)];
     }
