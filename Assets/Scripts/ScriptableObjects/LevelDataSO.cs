@@ -7,8 +7,8 @@ using UnityEngine.Events;
 public class LevelDataSO : ScriptableObject
 {
     public UnityEvent onLeftIndexUpdated, onRightIndexUpdated, onCorrectMatch, onWrongMatch, onStorageUpdate;
-    public List<Left> leftList;
-    public List<Right> rightList;
+    private List<Left> leftList;
+    private List<Right> rightList;
     private int leftIndex, rightIndex = 0;
     private Left[] storaged;
 
@@ -18,6 +18,7 @@ public class LevelDataSO : ScriptableObject
         leftList = new List<Left>();
         rightList = new List<Right>();
         storaged = new Left[2];
+        leftIndex = rightIndex = 0;
     }
 
 

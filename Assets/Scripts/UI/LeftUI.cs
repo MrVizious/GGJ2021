@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,14 +6,15 @@ public class LeftUI : MonoBehaviour
     public LevelDataSO data;
     public Image itemImage;
     public Image traitImage;
-    public Animator animator;
+    public Animator animalAnimator;
 
     private AnimatorOverrideController animatorOverrideController;
 
     private void Start()
     {
-        animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
-        animator.runtimeAnimatorController = animatorOverrideController;
+        animatorOverrideController = new AnimatorOverrideController(animalAnimator.runtimeAnimatorController);
+        animalAnimator.runtimeAnimatorController = animatorOverrideController;
+        UpdateGraphics();
     }
     public void UpdateGraphics()
     {
@@ -28,10 +27,18 @@ public class LeftUI : MonoBehaviour
 
     private void SetClip(AnimationClip newClip)
     {
-        if (!animatorOverrideController["LeftIdle"].Equals(newClip))
+        AnimationClip currentClip = animatorOverrideController["LeftIdle"];
+        Debug.Log("Current clip is: " + currentClip);
+        Debug.Log("New clip is: " + newClip);
+
+
+
+        bool areEqual = (!animatorOverrideController["LeftIdle"].Equals(newClip));
+        if (!areEqual)
         {
             animatorOverrideController["LeftIdle"] = newClip;
         }
+        Debug.Log("Got here");
     }
 
 
