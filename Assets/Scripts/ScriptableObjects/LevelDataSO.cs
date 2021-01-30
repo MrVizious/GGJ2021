@@ -159,7 +159,7 @@ public class LevelDataSO : ScriptableObject
     {
         // If the storage index is full, match
         // if not, storage current left instance and update shit
-        // TODO : Invoke event updating storage graphics 
+        // Invoke event updating storage graphics 
         if (storaged[storageIndex] != null)
         {
             Match(storageIndex);
@@ -193,5 +193,20 @@ public class LevelDataSO : ScriptableObject
     {
         rightList.Remove(rigthToRemove);
         RotateRight(-1);
+    }
+
+    public Left getCurrentLeft()
+    {
+        return leftList[leftIndex];
+    }
+
+    public Right getCurrentRight()
+    {
+        return rightList[rightIndex];
+    }
+
+    public Left getItemStoraged(int storageIndex)
+    {
+        return storaged[storageIndex];
     }
 }
