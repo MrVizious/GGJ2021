@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LeftUI : MonoBehaviour
 {
-    // public LevelDataSO data;
+    public LevelDataSO data;
     public Image itemImage;
     public Image traitImage;
     public Animation animalAnimation;
