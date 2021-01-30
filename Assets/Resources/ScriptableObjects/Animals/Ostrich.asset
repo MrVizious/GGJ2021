@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fdf59da267382390874e48e0582ff16, type: 3}
-  m_Name: Heavy
+  m_Script: {fileID: 11500000, guid: b5ae0357b664a9154b5204f2e4aac7f6, type: 3}
+  m_Name: Ostrich
   m_EditorClassIdentifier: 
-  traitName: Heavy
-  sprite: {fileID: 3084560779980381455, guid: b60f6a82d8e00ce4da477ef72b84257a, type: 3}
+  animalName: Ostrich
+  traits:
+  - {fileID: 11400000, guid: 22c78ffa40675784ea3277e47d969c66, type: 2}
+  - {fileID: 11400000, guid: 4f5ae89c890eef8239956ae1d35faab6, type: 2}
+  animations: []
