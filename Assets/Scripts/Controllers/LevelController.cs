@@ -34,4 +34,13 @@ public class LevelController : MonoBehaviour
             if (!added && count == maxNumberOfTries - 1) data.AddCombinationWithoutChecking(animalLeft, animalRight, item);
         }
     }
+
+    public void RotateLeft(int amount)
+    {
+        data.RotateLeft(amount);
+    }
+    public void RotateRight(int amount)
+    {
+        data.RotateRight(amount);
+    }
 }
