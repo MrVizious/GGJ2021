@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "LevelData", menuName = "ScriptableObjects/LevelData", order = 1)]
 public class LevelDataSO : ScriptableObject
 {
+    public UnityEvent onLeftIndexUpdated, onRightIndexUpdated, onCorrectMatch, onWrongMatch;
     private List<Left> leftList;
     private List<Right> rightList;
     private int leftIndex, rightIndex = 0;
@@ -21,7 +23,8 @@ public class LevelDataSO : ScriptableObject
     public bool AddCombination(AnimalSO leftAnimal, AnimalSO rightAnimal, ItemSO item)
     {
 
-        // TODO: Check that no other same animal is in right list with same item
+
+
         if (leftAnimal.Equals(rightAnimal))
         {
             return false;
@@ -35,6 +38,9 @@ public class LevelDataSO : ScriptableObject
         //Creation object right/receiver
         Animation animRight = rightAnimal.getRandomAnimation();
         Right objectRight = new Right(animRight, item, rightAnimal);
+
+        //Check that no other same animal is in right list with same item
+        if (rightList.IndexOf(objectRight) >= 0) return false;
 
 
         if (rightList.Count == 0)
@@ -59,9 +65,13 @@ public class LevelDataSO : ScriptableObject
         }
         else
         {
-            leftList.Insert(Random.Range(0, leftList.Count - 1), newLeft);
+            int randomIndex = Random.Range(0, leftList.Count - 1);
+            leftList.Insert(randomIndex, newLeft);
+            if (leftIndex >= randomIndex)
+            {
+                leftIndex++;
+            }
         }
-        // TODO: Update index
     }
 
     private void AddToRight(Right newRight)
@@ -73,44 +83,85 @@ public class LevelDataSO : ScriptableObject
         }
         else
         {
+            int randomIndex = Random.Range(0, rightList.Count - 1);
             rightList.Insert(Random.Range(0, rightList.Count - 1), newRight);
+            if (rightIndex >= randomIndex)
+            {
+                rightIndex++;
+            }
         }
-        // TODO: Update index
     }
 
     public void RotateLeft(int amountToRotate)
     {
         if (amountToRotate == 0) return;
 
-        // TODO: Update index depending on value (positive or negative)
-        // if positive: newIndex = (currentIndex + amountToRotate) % list.count
-        // if negative: newIndex = (currentIndex + amountToRotate + list.count) % list.count
+        // Update index depending on value (positive or negative)
+        leftIndex = mod(leftIndex + amountToRotate, leftList.Count);
 
-        // TODO: Raise event onLeftIndexUpdated
+        //Raise event onLeftIndexUpdated
+        onLeftIndexUpdated.Invoke();
+
     }
     public void RotateRight(int amountToRotate)
     {
         if (amountToRotate == 0) return;
 
-        // TODO: Update index depending on value (positive or negative)
-        // if positive: newIndex = (currentIndex + amountToRotate) % list.count
-        // if negative: newIndex = (currentIndex + amountToRotate + list.count) % list.count
+        rightIndex = mod(rightIndex + amountToRotate, rightList.Count);
 
-        // TODO: Raise event onRightIndexUpdated
+        //Raise event onRightIndexUpdated
+        onRightIndexUpdated.Invoke();
     }
 
     public bool Match(int storageIndex)
     {
-        // TODO: Does the trait and item on the left match the trait and item of the right?
+        // Does the trait and item on the left match the trait and item of the right?
         // TODO: Delete both, left from storage and right from list
+        TraitSO traitLeft = storaged[storageIndex].trait;
+        ItemSO itemLeft = storaged[storageIndex].item;
 
-        // TODO: Raise event onCorrectMatch or onWrongMatch
-        return false;
+        List<TraitSO> traitsRight = rightList[rightIndex].animal.traits;
+        ItemSO itemRight = rightList[rightIndex].item;
+        bool conditionMatch = false;
+
+        //If item isnt equal Wrong Match
+        if (!itemLeft.Equals(itemRight))//Item not correct
+        {
+            conditionMatch = false;
+        }
+        else//Item correct
+        {
+            for (int count = 0; count < traitsRight.Count; count++)
+            {
+                if (traitsRight[count] == traitLeft)//Trait found in rightAnimal
+                {
+                    conditionMatch = true;
+                }
+            }
+        }
+        //Trait not found in rightAnimal
+        if (conditionMatch)
+        {
+            onCorrectMatch.Invoke();
+            return true;
+        }
+        else
+        {
+            onWrongMatch.Invoke();
+            return false;
+        }
+
+
     }
 
     public void StorageAction(int storageIndex)
     {
         // TODO: If the storage index is full, match
         // if not, storage current left instance and update shit
+    }
+
+    public int mod(int x, int m)
+    {
+        return (x % m + m) % m;
     }
 }
