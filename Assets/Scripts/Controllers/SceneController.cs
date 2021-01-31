@@ -25,6 +25,10 @@ public class SceneController : MonoBehaviour
     {
         LoadScene("CreditScene");
     }
+    public void LoadHowToPlay()
+    {
+        LoadScene("HowToPlayScene");
+    }
     public void QuitGame()
     {
 #if UNITY_EDITOR
