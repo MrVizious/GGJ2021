@@ -17,6 +17,10 @@ public class SceneController : MonoBehaviour
     {
         LoadScene("GameScene");
     }
+    public void LoadGameOverScene()
+    {
+        LoadScene("GameOverScene");
+    }
     public void LoadCreditScene()
     {
         LoadScene("CreditScene");
