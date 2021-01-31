@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Camera
   m_EditorClassIdentifier: 
   itemName: Camera
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 0101f9ee00e9b734281885a9e2d09494, type: 3}
+  spriteOutline: {fileID: 21300000, guid: 1718684d8b0248540bd39fc2f03b4f35, type: 3}

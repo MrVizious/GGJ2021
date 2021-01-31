@@ -22,7 +22,16 @@ public class StorageUI : MonoBehaviour
     {
         for (int i = 0; i < storageImages.Length; i++)
         {
-            storageImages[i].sprite = data.storaged[i].item.sprite;
+            if (data.storaged[i] != null)
+            {
+                storageImages[i].sprite = data.storaged[i].item.sprite;
+                storageImages[i].color = new Color32(255, 255, 255, 255);
+            }
+            else
+            {
+                storageImages[i].sprite = null;
+                storageImages[i].color = new Color32(255, 255, 255, 0);
+            }
         }
     }
 }
