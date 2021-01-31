@@ -48,6 +48,7 @@ public class Spawner : MonoBehaviour
         if (timer.secondsSinceStart
             >= lastSpawnTimeStamp + levels.levels[currentLevel].secondsBetweenSpawn)
         {
+            lastSpawnTimeStamp = timer.secondsSinceStart;
             for (int i = 0; i < levels.levels[currentLevel].numberOfCombinationsToSpawn; i++)
             {
                 levelController.AddCombination();

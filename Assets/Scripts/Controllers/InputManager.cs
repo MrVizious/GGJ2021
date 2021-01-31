@@ -47,47 +47,56 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetButtonDown("GiverRight"))
         {
-            if (debug) Debug.Log("GiverRightUp pressed");
+            if (debug) Debug.Log("GiverRightDown pressed");
             onGiverRightDown.Invoke();
         }
         else if (Input.GetButtonUp("GiverRight"))
         {
+            if (debug) Debug.Log("GiverRightUp pressed");
             onGiverRightUp.Invoke();
         }
 
         if (Input.GetButtonDown("ReceiverLeft"))
         {
+            if (debug) Debug.Log("ReceiverLeftDown pressed");
             onReceiverLeftDown.Invoke();
         }
         else if (Input.GetButtonUp("ReceiverLeft"))
         {
+            if (debug) Debug.Log("ReceiverLeftUp pressed");
             onReceiverLeftUp.Invoke();
         }
 
         if (Input.GetButtonDown("ReceiverRight"))
         {
+            if (debug) Debug.Log("ReceiverRightDown pressed");
             onReceiverRightDown.Invoke();
         }
         else if (Input.GetButtonUp("ReceiverRight"))
         {
+            if (debug) Debug.Log("ReceiverRightUp pressed");
             onReceiverRightUp.Invoke();
         }
 
         if (Input.GetButtonDown("StorageA"))
         {
+            if (debug) Debug.Log("StorageADown pressed");
             onStorageADown.Invoke();
         }
         else if (Input.GetButtonUp("StorageA"))
         {
+            if (debug) Debug.Log("StorageAUp pressed");
             onStorageAUp.Invoke();
         }
 
         if (Input.GetButtonDown("StorageB"))
         {
+            if (debug) Debug.Log("StorageBDown pressed");
             onStorageBDown.Invoke();
         }
         else if (Input.GetButtonUp("StorageB"))
         {
+            if (debug) Debug.Log("StorageBUp pressed");
             onStorageBUp.Invoke();
         }
 
