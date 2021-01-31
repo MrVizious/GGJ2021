@@ -52,7 +52,7 @@ public class LevelController : MonoBehaviour
     public void StorageAction(int index)
     {
         data.StorageAction(index);
-        while (data.rightList.Count < 10)
+        while (data.rightList.Count < initialCombinations)
         {
             AddCombination();
         }

@@ -54,10 +54,11 @@ public class LevelDataSO : ScriptableObject
         else if (leftList.Count == 0)
         {
             leftList.Add(objectLeft);
+            leftIndex = 0;
         }
         else
         {
-            leftList.Insert(Random.Range(0, rightList.Count - 1), objectLeft);
+            AddToLeft(objectLeft);
         }
 
         if (rightList == null)
@@ -67,10 +68,11 @@ public class LevelDataSO : ScriptableObject
         else if (rightList.Count == 0)
         {
             rightList.Add(objectRight);
+            rightIndex = 0;
         }
         else
         {
-            rightList.Insert(Random.Range(0, rightList.Count - 1), objectRight);
+            AddToRight(objectRight);
         }
         onNewCombinationAdded.Invoke();
         return true;
@@ -114,9 +116,10 @@ public class LevelDataSO : ScriptableObject
             leftList.Insert(randomIndex, newLeft);
             if (leftIndex >= randomIndex)
             {
-                leftIndex++;
+                RotateLeft(1);
             }
         }
+        onLeftIndexUpdated.Invoke();
     }
 
     private void AddToRight(Right newRight)
@@ -132,9 +135,10 @@ public class LevelDataSO : ScriptableObject
             rightList.Insert(Random.Range(0, rightList.Count - 1), newRight);
             if (rightIndex >= randomIndex)
             {
-                rightIndex++;
+                RotateRight(1);
             }
         }
+        onRightIndexUpdated.Invoke();
     }
 
     public void RotateLeft(int amountToRotate)
@@ -234,13 +238,21 @@ public class LevelDataSO : ScriptableObject
     public void RemoveFromLeft(Left leftToRemove)
     {
         leftList.Remove(leftToRemove);
-        RotateLeft(-1);
+        if (leftIndex == leftList.Count)
+        {
+            RotateLeft(-1);
+        }
+        onLeftIndexUpdated.Invoke();
     }
 
     public void RemoveFromRigth(Right rigthToRemove)
     {
         rightList.Remove(rigthToRemove);
-        RotateRight(-1);
+        if (rightIndex == rightList.Count)
+        {
+            RotateRight(-1);
+        }
+        onRightIndexUpdated.Invoke();
     }
 
     public Left getCurrentLeft()
