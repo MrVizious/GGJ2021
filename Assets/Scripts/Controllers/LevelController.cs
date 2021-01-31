@@ -26,6 +26,9 @@ public class LevelController : MonoBehaviour
         {
             AddCombination();
         }
+        data.Randomize();
+        data.leftIndex = 0;
+        data.rightIndex = 0;
     }
 
     public void AddCombination()

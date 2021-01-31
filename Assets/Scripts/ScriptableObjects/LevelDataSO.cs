@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Linq;
 
 [CreateAssetMenu(fileName = "LevelData", menuName = "ScriptableObjects/LevelData", order = 1)]
 public class LevelDataSO : ScriptableObject
@@ -24,7 +25,11 @@ public class LevelDataSO : ScriptableObject
         leftIndex = rightIndex = 0;
     }
 
-
+    public void Randomize()
+    {
+        leftList.Shuffle();
+        rightList.Shuffle();
+    }
 
     public bool AddCombination(AnimalSO leftAnimal, AnimalSO rightAnimal, ItemSO item)
     {
