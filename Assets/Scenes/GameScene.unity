@@ -850,7 +850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec2f21516f8125f5d83140122dcff750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug: 0
+  debug: 1
   onPause:
     m_PersistentCalls:
       m_Calls:
@@ -1004,7 +1004,7 @@ MonoBehaviour:
   onStorageBDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 174d21e5184a42557b54fa19f6ca0178, type: 2}
+      - m_Target: {fileID: 11400000, guid: e29b3ae3c6e61e7c289f8ad330252cc8, type: 2}
         m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
         m_MethodName: Raise
         m_Mode: 1
@@ -1019,7 +1019,7 @@ MonoBehaviour:
   onStorageAUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: e29b3ae3c6e61e7c289f8ad330252cc8, type: 2}
+      - m_Target: {fileID: 11400000, guid: 174d21e5184a42557b54fa19f6ca0178, type: 2}
         m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
         m_MethodName: Raise
         m_Mode: 1
