@@ -146,7 +146,6 @@ public class LevelDataSO : ScriptableObject
 
         //Raise event onLeftIndexUpdated
         onLeftIndexUpdated.Invoke();
-        Debug.Log("Rotated left");
 
     }
     public void RotateRight(int amountToRotate)
@@ -157,7 +156,6 @@ public class LevelDataSO : ScriptableObject
 
         //Raise event onRightIndexUpdated
         onRightIndexUpdated.Invoke();
-        Debug.Log("Rotated right");
     }
 
     public bool Match(int storageIndex)
@@ -224,6 +222,7 @@ public class LevelDataSO : ScriptableObject
 
     public int mod(int x, int m)
     {
+        if (m == 0) return x;
         return (x % m + m) % m;
     }
 

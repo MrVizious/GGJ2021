@@ -5,14 +5,16 @@ using UnityEngine.UI;
 
 public class ButtonUI : MonoBehaviour
 {
-    public Image buttonImage;
     public Sprite upSprite, downSprite;
+    private Image buttonImage;
     private bool isPressed = false;
 
     private void Start()
     {
         isPressed = false;
+        buttonImage = GetComponent<Image>();
         buttonImage.sprite = upSprite;
+        GetComponent<Animator>()?.Play(0, -1, Random.value);
     }
 
     public void Press()

@@ -29,7 +29,6 @@ public class SoundController : MonoBehaviour
     }
     public void OpenDoor()
     {
-        Debug.Log("Open door called");
         if (doorCoroutine == null)
         {
             doorCoroutine = DoorCoroutine();
@@ -39,7 +38,6 @@ public class SoundController : MonoBehaviour
 
     private IEnumerator DoorCoroutine()
     {
-        Debug.Log("Open door started");
         doorSource.clip = openDoorClip;
         doorSource.Play();
         yield return new WaitForSeconds(0.2f);
@@ -48,7 +46,7 @@ public class SoundController : MonoBehaviour
         {
             yield return null;
         }
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.4f);
         doorSource.clip = closeDoorClip;
         doorSource.Play();
         yield return new WaitForSeconds(0.2f);
