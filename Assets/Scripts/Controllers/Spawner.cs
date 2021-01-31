@@ -32,7 +32,10 @@ public class Spawner : MonoBehaviour
                 if (timer.secondsSinceStart
                     > levels.levels[currentLevel].maxPoint)
                 {
-                    currentLevel++;
+                    if (currentLevel < levels.levels.Count - 1)
+                    {
+                        currentLevel++;
+                    }
                 }
                 break;
 
@@ -40,7 +43,10 @@ public class Spawner : MonoBehaviour
                 if (score.currentScore
                     > levels.levels[currentLevel].maxPoint)
                 {
-                    currentLevel++;
+                    if (currentLevel < levels.levels.Count - 1)
+                    {
+                        currentLevel++;
+                    }
                 }
 
                 break;

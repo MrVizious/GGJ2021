@@ -10,7 +10,7 @@ public class LevelDataSO : ScriptableObject
     [SerializeField]
     private List<Left> leftList;
     [SerializeField]
-    private List<Right> rightList;
+    public List<Right> rightList;
     private int leftIndex, rightIndex = 0;
     private Left[] storaged;
 

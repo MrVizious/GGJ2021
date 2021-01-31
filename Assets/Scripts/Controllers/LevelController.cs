@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
+    //Variable public storageAction(index)
+    //index =0||1, if storage A or B
+    //if rightList < 10: AddCombination until 10
+    //Add eventListeners: onStorageADown, onStorageBDown
     public LevelDataSO data;
     public int initialCombinations = 10;
     public int maxNumberOfTries = 10;
@@ -42,5 +46,13 @@ public class LevelController : MonoBehaviour
     public void RotateRight(int amount)
     {
         data.RotateRight(amount);
+    }
+    public void StorageAction(int index)
+    {
+        data.StorageAction(index);
+        while (data.rightList.Count < 10)
+        {
+            AddCombination();
+        }
     }
 }
