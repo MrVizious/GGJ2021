@@ -34,6 +34,7 @@ public class LevelDataSO : ScriptableObject
             return false;
         }
 
+
         AnimationClip animLeft = leftAnimal.getRandomAnimation();
         TraitSO trait = rightAnimal.getRandomTrait();
 
@@ -54,10 +55,11 @@ public class LevelDataSO : ScriptableObject
         else if (leftList.Count == 0)
         {
             leftList.Add(objectLeft);
+            leftIndex = 0;
         }
         else
         {
-            leftList.Insert(Random.Range(0, rightList.Count - 1), objectLeft);
+            AddToLeft(objectLeft);
         }
 
         if (rightList == null)
@@ -67,10 +69,11 @@ public class LevelDataSO : ScriptableObject
         else if (rightList.Count == 0)
         {
             rightList.Add(objectRight);
+            rightIndex = 0;
         }
         else
         {
-            rightList.Insert(Random.Range(0, rightList.Count - 1), objectRight);
+            AddToRight(objectRight);
         }
         onNewCombinationAdded.Invoke();
         return true;
@@ -114,9 +117,11 @@ public class LevelDataSO : ScriptableObject
             leftList.Insert(randomIndex, newLeft);
             if (leftIndex >= randomIndex)
             {
-                leftIndex++;
+                RotateLeft(1);
+                //leftIndex++;
             }
         }
+        onLeftIndexUpdated.Invoke();
     }
 
     private void AddToRight(Right newRight)
@@ -132,9 +137,11 @@ public class LevelDataSO : ScriptableObject
             rightList.Insert(Random.Range(0, rightList.Count - 1), newRight);
             if (rightIndex >= randomIndex)
             {
-                rightIndex++;
+                RotateRight(1);
+                //rightIndex++;
             }
         }
+        onRightIndexUpdated.Invoke();
     }
 
     public void RotateLeft(int amountToRotate)
@@ -142,7 +149,9 @@ public class LevelDataSO : ScriptableObject
         if (amountToRotate == 0) return;
 
         // Update index depending on value (positive or negative)
+        Debug.Log("LeftIndex previous to rotation : " + leftIndex);
         leftIndex = mod(leftIndex + amountToRotate, leftList.Count);
+        Debug.Log("LeftIndex posterior to rotation : " + leftIndex);
 
         //Raise event onLeftIndexUpdated
         onLeftIndexUpdated.Invoke();
@@ -234,13 +243,21 @@ public class LevelDataSO : ScriptableObject
     public void RemoveFromLeft(Left leftToRemove)
     {
         leftList.Remove(leftToRemove);
-        RotateLeft(-1);
+        if (leftIndex == leftList.Count)
+        {
+            RotateLeft(-1);
+        }
+        onLeftIndexUpdated.Invoke();
     }
 
     public void RemoveFromRigth(Right rigthToRemove)
     {
         rightList.Remove(rigthToRemove);
-        RotateRight(-1);
+        if (rightIndex == rightList.Count)
+        {
+            RotateRight(-1);
+        }
+        onRightIndexUpdated.Invoke();
     }
 
     public Left getCurrentLeft()

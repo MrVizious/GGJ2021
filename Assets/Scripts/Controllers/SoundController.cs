@@ -75,4 +75,19 @@ public class SoundController : MonoBehaviour
         buttonSource.clip = buttonPressedClip;
         buttonSource.Play();
     }
+    public void PlayMatchCorrectSound()
+    {
+        matchSource.clip = matchCorrectClip;
+        matchSource.Play();
+    }
+    public void PlayMatchWrongSound()
+    {
+        matchSource.clip = matchWrongClip;
+        matchSource.Play();
+    }
+    public void PlayStorageSound()
+    {
+        storageSource.clip = storageSoundClip;
+        storageSource.Play();
+    }
 }
