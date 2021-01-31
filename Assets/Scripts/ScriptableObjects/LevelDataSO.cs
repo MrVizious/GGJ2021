@@ -9,10 +9,10 @@ public class LevelDataSO : ScriptableObject
     public UnityEvent onLeftIndexUpdated, onRightIndexUpdated, onCorrectMatch,
                       onWrongMatch, onStorageUpdate, onNewCombinationAdded;
     [SerializeField]
-    private List<Left> leftList;
+    public List<Left> leftList;
     [SerializeField]
     public List<Right> rightList;
-    private int leftIndex, rightIndex = 0;
+    public int leftIndex, rightIndex = 0;
     public Left[] storaged;
 
 
