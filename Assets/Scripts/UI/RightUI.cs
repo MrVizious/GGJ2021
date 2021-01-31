@@ -22,8 +22,6 @@ public class RightUI : MonoBehaviour
     }
     private void SetClip(AnimationClip newClip)
     {
-        // TODO: Check that the new is different from the current
-
         if (newClip)
         {
             AnimatorOverrideController aoc = new AnimatorOverrideController(animalAnimator.runtimeAnimatorController);

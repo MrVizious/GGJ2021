@@ -26,9 +26,6 @@ public class LeftUI : MonoBehaviour
 
     private void SetClip(AnimationClip newClip)
     {
-        // TODO: Check that the new is different from the current
-        // Debug.Log("Newclip: " + newClip);
-
         if (newClip)
         {
             AnimatorOverrideController aoc = new AnimatorOverrideController(animalAnimator.runtimeAnimatorController);
