@@ -9,6 +9,7 @@ public class LevelController : MonoBehaviour
     //if rightList < 10: AddCombination until 10
     //Add eventListeners: onStorageADown, onStorageBDown
     public LevelDataSO data;
+    public ScoreSO score;
     public int initialCombinations = 10;
     public int maxNumberOfTries = 10;
     private ResourceLoader loader;
@@ -16,6 +17,7 @@ public class LevelController : MonoBehaviour
     private void Awake()
     {
         data.Setup();
+        score.Reset();
     }
     private void OnEnable()
     {
@@ -54,5 +56,15 @@ public class LevelController : MonoBehaviour
         {
             AddCombination();
         }
+    }
+
+    public void IncreaseScore()
+    {
+        score.IncreaseScore();
+    }
+
+    public void DecreaseScore()
+    {
+        score.DecreaseScore();
     }
 }

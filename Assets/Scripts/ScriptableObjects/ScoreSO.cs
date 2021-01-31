@@ -31,4 +31,9 @@ public class ScoreSO : ScriptableObject
             int.MaxValue
         );
     }
+
+    public void Reset()
+    {
+        currentScore = 0;
+    }
 }

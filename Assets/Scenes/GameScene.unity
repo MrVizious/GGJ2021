@@ -1106,6 +1106,8 @@ GameObject:
   - component: {fileID: 612121498}
   - component: {fileID: 612121501}
   - component: {fileID: 612121500}
+  - component: {fileID: 612121503}
+  - component: {fileID: 612121502}
   m_Layer: 0
   m_Name: LevelController
   m_TagString: Untagged
@@ -1126,6 +1128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: e767787f72e41fcc98932e5e09c38340, type: 2}
+  score: {fileID: 11400000, guid: 257bc6ad7a7220f2b8607e3cbe508fbb, type: 2}
   initialCombinations: 10
   maxNumberOfTries: 50
 --- !u!4 &612121495
@@ -1302,6 +1305,62 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
         m_MethodName: StorageAction
         m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &612121502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612121493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73c3300c18afd2f0929e4476b28161e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameEvent: {fileID: 11400000, guid: d07d63e6d0d822ed8a06c02232738f0a, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 612121494}
+        m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
+        m_MethodName: DecreaseScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &612121503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612121493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73c3300c18afd2f0929e4476b28161e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameEvent: {fileID: 11400000, guid: d48a7f4bc6f484584a89b457afed2b44, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 612121494}
+        m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
+        m_MethodName: IncreaseScore
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2060,6 +2119,7 @@ GameObject:
   - component: {fileID: 1227904392}
   - component: {fileID: 1227904394}
   - component: {fileID: 1227904393}
+  - component: {fileID: 1227904395}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2128,6 +2188,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227904391}
   m_CullTransparentMesh: 1
+--- !u!114 &1227904395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227904391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6d2cbe4035b650b9dabbd4a1c65226, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 11400000, guid: 257bc6ad7a7220f2b8607e3cbe508fbb, type: 2}
 --- !u!1 &1296387719
 GameObject:
   m_ObjectHideFlags: 0
