@@ -553,7 +553,7 @@ InputManager:
     m_Name: ReceiverRight
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: k
+    negativeButton: l
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
