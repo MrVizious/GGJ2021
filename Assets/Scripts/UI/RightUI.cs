@@ -23,7 +23,6 @@ public class RightUI : MonoBehaviour
     private void SetClip(AnimationClip newClip)
     {
         // TODO: Check that the new is different from the current
-        Debug.Log("Newclip: " + newClip);
 
         if (newClip)
         {
