@@ -11,7 +11,7 @@ public class SceneController : MonoBehaviour
     }
     public void LoadMainMenu()
     {
-        LoadScene("MainMenuScene");
+        LoadScene("MainMenu");
     }
     public void LoadGame()
     {
