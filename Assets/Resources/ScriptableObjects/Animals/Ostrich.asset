@@ -16,4 +16,6 @@ MonoBehaviour:
   traits:
   - {fileID: 11400000, guid: 22c78ffa40675784ea3277e47d969c66, type: 2}
   - {fileID: 11400000, guid: 4f5ae89c890eef8239956ae1d35faab6, type: 2}
-  animations: []
+  animations:
+  - {fileID: 7400000, guid: 1684564432ac7c345a651fc6c386aec3, type: 2}
+  - {fileID: 7400000, guid: 20936a0fbb57fa84881654c155ed4319, type: 2}

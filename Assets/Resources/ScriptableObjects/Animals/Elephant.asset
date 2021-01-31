@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5ae0357b664a9154b5204f2e4aac7f6, type: 3}
-  m_Name: Turtle
+  m_Name: Elephant
   m_EditorClassIdentifier: 
-  animalName: Turtle
+  animalName: Elephant
   traits:
-  - {fileID: 11400000, guid: d798904608f65e44a994966db2ba2cef, type: 2}
-  - {fileID: 11400000, guid: 37ae84b5b6684834cb2aa197eccb8626, type: 2}
-  animations: []
+  - {fileID: 11400000, guid: 4f5ae89c890eef8239956ae1d35faab6, type: 2}
+  - {fileID: 11400000, guid: af61e379bc4170a4b9fd23facb659098, type: 2}
+  animations:
+  - {fileID: 7400000, guid: fdbbb5b40d7c44f4192eccffdded85ac, type: 2}
+  - {fileID: 7400000, guid: 7abc9f390c79af940a3853869d6b3c69, type: 2}

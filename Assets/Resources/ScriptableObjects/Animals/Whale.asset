@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5ae0357b664a9154b5204f2e4aac7f6, type: 3}
-  m_Name: Elephant
+  m_Name: Whale
   m_EditorClassIdentifier: 
-  animalName: Elephant
+  animalName: Whale
   traits:
+  - {fileID: 11400000, guid: d798904608f65e44a994966db2ba2cef, type: 2}
   - {fileID: 11400000, guid: 4f5ae89c890eef8239956ae1d35faab6, type: 2}
-  - {fileID: 11400000, guid: af61e379bc4170a4b9fd23facb659098, type: 2}
-  animations: []
+  animations:
+  - {fileID: 7400000, guid: a3d42bf53c4a60e4a896a5cd72177fa7, type: 2}
+  - {fileID: 7400000, guid: f5b9438080dab3f41af715bf1d4398c5, type: 2}
