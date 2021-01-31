@@ -7,8 +7,10 @@ public class SoundController : MonoBehaviour
 {
     public AudioClip musicClip;
     public AudioClip openDoorClip, closeDoorClip;
+    public AudioClip buttonPressedClip, matchCorrectClip, matchWrongClip, storageSoundClip;
 
     public AudioSource musicSource, doorSource;
+    public AudioSource buttonSource, matchSource, storageSource;
     public AudioLowPassFilter lowPassFilter;
 
 
@@ -67,5 +69,10 @@ public class SoundController : MonoBehaviour
     {
         lowPassFilter.cutoffFrequency = cutoffFrequency;
         lowPassFilter.lowpassResonanceQ = lowpassResonance;
+    }
+    public void PlayButtonPressedSound()
+    {
+        buttonSource.clip = buttonPressedClip;
+        buttonSource.Play();
     }
 }
