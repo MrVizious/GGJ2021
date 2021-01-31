@@ -10,18 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16045546e79ef88dabe87a4ad10a2b40, type: 3}
-  m_Name: SpawnerLevels
+  m_Name: TimeDifficulty
   m_EditorClassIdentifier: 
   levels:
   - maxPoint: 500
-    secondsBetweenSpawn: 4
+    secondsBetweenSpawn: 10
     numberOfCombinationsToSpawn: 1
   - maxPoint: 1000
-    secondsBetweenSpawn: 3
+    secondsBetweenSpawn: 8
     numberOfCombinationsToSpawn: 1
-  - maxPoint: 1500
-    secondsBetweenSpawn: 3
-    numberOfCombinationsToSpawn: 2
   - maxPoint: 2000
-    secondsBetweenSpawn: 2
+    secondsBetweenSpawn: 6
+    numberOfCombinationsToSpawn: 1
+  - maxPoint: 3000
+    secondsBetweenSpawn: 7
+    numberOfCombinationsToSpawn: 2
+  - maxPoint: 5000
+    secondsBetweenSpawn: 7
+    numberOfCombinationsToSpawn: 2
+  - maxPoint: 8000
+    secondsBetweenSpawn: 5
     numberOfCombinationsToSpawn: 2

@@ -6,7 +6,8 @@ using UnityEngine.Events;
 [CreateAssetMenu(fileName = "LevelData", menuName = "ScriptableObjects/LevelData", order = 1)]
 public class LevelDataSO : ScriptableObject
 {
-    public UnityEvent onLeftIndexUpdated, onRightIndexUpdated, onCorrectMatch, onWrongMatch, onStorageUpdate;
+    public UnityEvent onLeftIndexUpdated, onRightIndexUpdated, onCorrectMatch,
+                      onWrongMatch, onStorageUpdate, onNewCombinationAdded;
     [SerializeField]
     private List<Left> leftList;
     [SerializeField]
@@ -71,7 +72,7 @@ public class LevelDataSO : ScriptableObject
         {
             rightList.Insert(Random.Range(0, rightList.Count - 1), objectRight);
         }
-
+        onNewCombinationAdded.Invoke();
         return true;
 
     }
@@ -92,6 +93,7 @@ public class LevelDataSO : ScriptableObject
 
         AddToLeft(objectLeft);
         AddToRight(objectRight);
+        onNewCombinationAdded.Invoke();
 
     }
 

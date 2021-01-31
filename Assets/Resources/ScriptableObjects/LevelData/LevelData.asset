@@ -87,50 +87,86 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onNewCombinationAdded:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 21fa3c269efeef493ada013e717ad5ad, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   leftList:
+  - chosenAnimation: {fileID: 7400000, guid: 447b5e83a841ca24aa96dbe4e7c4b773, type: 2}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    trait: {fileID: 11400000, guid: d798904608f65e44a994966db2ba2cef, type: 2}
   - chosenAnimation: {fileID: 7400000, guid: 44921420799de0941a51d802eb095a6c, type: 2}
     item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
     trait: {fileID: 11400000, guid: d798904608f65e44a994966db2ba2cef, type: 2}
-  - chosenAnimation: {fileID: 7400000, guid: 185c338206a488748902702650e4a029, type: 2}
+  - chosenAnimation: {fileID: 7400000, guid: 44921420799de0941a51d802eb095a6c, type: 2}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    trait: {fileID: 11400000, guid: 22c78ffa40675784ea3277e47d969c66, type: 2}
+  - chosenAnimation: {fileID: 7400000, guid: 44921420799de0941a51d802eb095a6c, type: 2}
     item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
     trait: {fileID: 11400000, guid: af61e379bc4170a4b9fd23facb659098, type: 2}
-  - chosenAnimation: {fileID: 7400000, guid: de1347bdd6483d149b7783b9bb5cd673, type: 2}
-    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
-    trait: {fileID: 11400000, guid: 22c78ffa40675784ea3277e47d969c66, type: 2}
-  - chosenAnimation: {fileID: 7400000, guid: 185c338206a488748902702650e4a029, type: 2}
-    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
-    trait: {fileID: 11400000, guid: d798904608f65e44a994966db2ba2cef, type: 2}
-  - chosenAnimation: {fileID: 7400000, guid: de1347bdd6483d149b7783b9bb5cd673, type: 2}
-    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
-    trait: {fileID: 11400000, guid: 22c78ffa40675784ea3277e47d969c66, type: 2}
   - chosenAnimation: {fileID: 7400000, guid: 447b5e83a841ca24aa96dbe4e7c4b773, type: 2}
     item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
     trait: {fileID: 11400000, guid: 22c78ffa40675784ea3277e47d969c66, type: 2}
-  - chosenAnimation: {fileID: 7400000, guid: 447b5e83a841ca24aa96dbe4e7c4b773, type: 2}
-    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
-    trait: {fileID: 11400000, guid: d798904608f65e44a994966db2ba2cef, type: 2}
   - chosenAnimation: {fileID: 7400000, guid: da640e5204d4252499f51be7abd6535c, type: 2}
     item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
     trait: {fileID: 11400000, guid: 22c78ffa40675784ea3277e47d969c66, type: 2}
-  - chosenAnimation: {fileID: 7400000, guid: 185c338206a488748902702650e4a029, type: 2}
+  - chosenAnimation: {fileID: 7400000, guid: da640e5204d4252499f51be7abd6535c, type: 2}
     item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
-    trait: {fileID: 11400000, guid: 22c78ffa40675784ea3277e47d969c66, type: 2}
+    trait: {fileID: 11400000, guid: af61e379bc4170a4b9fd23facb659098, type: 2}
+  - chosenAnimation: {fileID: 7400000, guid: 447b5e83a841ca24aa96dbe4e7c4b773, type: 2}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    trait: {fileID: 11400000, guid: d798904608f65e44a994966db2ba2cef, type: 2}
   - chosenAnimation: {fileID: 7400000, guid: 44921420799de0941a51d802eb095a6c, type: 2}
     item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
     trait: {fileID: 11400000, guid: af61e379bc4170a4b9fd23facb659098, type: 2}
+  - chosenAnimation: {fileID: 7400000, guid: 447b5e83a841ca24aa96dbe4e7c4b773, type: 2}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    trait: {fileID: 11400000, guid: af61e379bc4170a4b9fd23facb659098, type: 2}
+  - chosenAnimation: {fileID: 7400000, guid: de1347bdd6483d149b7783b9bb5cd673, type: 2}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    trait: {fileID: 11400000, guid: af61e379bc4170a4b9fd23facb659098, type: 2}
+  - chosenAnimation: {fileID: 7400000, guid: 447b5e83a841ca24aa96dbe4e7c4b773, type: 2}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    trait: {fileID: 11400000, guid: af61e379bc4170a4b9fd23facb659098, type: 2}
+  - chosenAnimation: {fileID: 7400000, guid: de1347bdd6483d149b7783b9bb5cd673, type: 2}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    trait: {fileID: 11400000, guid: 22c78ffa40675784ea3277e47d969c66, type: 2}
   rightList:
-  - chosenAnimation: {fileID: 7400000, guid: abda9dd3bd45d174993d6ddd434777f9, type: 2}
+  - chosenAnimation: {fileID: 7400000, guid: 447b5e83a841ca24aa96dbe4e7c4b773, type: 2}
     item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
-    animal: {fileID: 11400000, guid: 41de2994ff6b00c4187f1e455a28e973, type: 2}
-  - chosenAnimation: {fileID: 7400000, guid: abda9dd3bd45d174993d6ddd434777f9, type: 2}
+    animal: {fileID: 11400000, guid: 8556b1fc1d1e30b409c8cc30f8a7d56a, type: 2}
+  - chosenAnimation: {fileID: 7400000, guid: 447b5e83a841ca24aa96dbe4e7c4b773, type: 2}
     item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
-    animal: {fileID: 11400000, guid: 41de2994ff6b00c4187f1e455a28e973, type: 2}
-  - chosenAnimation: {fileID: 7400000, guid: 44921420799de0941a51d802eb095a6c, type: 2}
-    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
-    animal: {fileID: 11400000, guid: 7ae19cbd25946674481016d544b1c37e, type: 2}
+    animal: {fileID: 11400000, guid: 8556b1fc1d1e30b409c8cc30f8a7d56a, type: 2}
   - chosenAnimation: {fileID: 7400000, guid: da640e5204d4252499f51be7abd6535c, type: 2}
     item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
     animal: {fileID: 11400000, guid: 90b333e9ba6faea42ade618b45b39ea4, type: 2}
+  - chosenAnimation: {fileID: 7400000, guid: 447b5e83a841ca24aa96dbe4e7c4b773, type: 2}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    animal: {fileID: 11400000, guid: 8556b1fc1d1e30b409c8cc30f8a7d56a, type: 2}
+  - chosenAnimation: {fileID: 7400000, guid: abda9dd3bd45d174993d6ddd434777f9, type: 2}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    animal: {fileID: 11400000, guid: 41de2994ff6b00c4187f1e455a28e973, type: 2}
+  - chosenAnimation: {fileID: 7400000, guid: da640e5204d4252499f51be7abd6535c, type: 2}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    animal: {fileID: 11400000, guid: 90b333e9ba6faea42ade618b45b39ea4, type: 2}
+  - chosenAnimation: {fileID: 7400000, guid: 44921420799de0941a51d802eb095a6c, type: 2}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    animal: {fileID: 11400000, guid: 7ae19cbd25946674481016d544b1c37e, type: 2}
+  - chosenAnimation: {fileID: 7400000, guid: de1347bdd6483d149b7783b9bb5cd673, type: 2}
+    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
+    animal: {fileID: 11400000, guid: d6ce0cef54aab7eafb3082baf18360b0, type: 2}
   - chosenAnimation: {fileID: 7400000, guid: abda9dd3bd45d174993d6ddd434777f9, type: 2}
     item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
     animal: {fileID: 11400000, guid: 41de2994ff6b00c4187f1e455a28e973, type: 2}
@@ -140,12 +176,16 @@ MonoBehaviour:
   - chosenAnimation: {fileID: 7400000, guid: da640e5204d4252499f51be7abd6535c, type: 2}
     item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
     animal: {fileID: 11400000, guid: 90b333e9ba6faea42ade618b45b39ea4, type: 2}
-  - chosenAnimation: {fileID: 7400000, guid: da640e5204d4252499f51be7abd6535c, type: 2}
+  - chosenAnimation: {fileID: 7400000, guid: de1347bdd6483d149b7783b9bb5cd673, type: 2}
     item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
-    animal: {fileID: 11400000, guid: 90b333e9ba6faea42ade618b45b39ea4, type: 2}
-  - chosenAnimation: {fileID: 7400000, guid: 44921420799de0941a51d802eb095a6c, type: 2}
+    animal: {fileID: 11400000, guid: d6ce0cef54aab7eafb3082baf18360b0, type: 2}
+  - chosenAnimation: {fileID: 7400000, guid: abda9dd3bd45d174993d6ddd434777f9, type: 2}
     item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
-    animal: {fileID: 11400000, guid: 7ae19cbd25946674481016d544b1c37e, type: 2}
-  - chosenAnimation: {fileID: 7400000, guid: 447b5e83a841ca24aa96dbe4e7c4b773, type: 2}
-    item: {fileID: 11400000, guid: 991724e532576f424881d709633a6359, type: 2}
-    animal: {fileID: 11400000, guid: 8556b1fc1d1e30b409c8cc30f8a7d56a, type: 2}
+    animal: {fileID: 11400000, guid: 41de2994ff6b00c4187f1e455a28e973, type: 2}
+  storaged:
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 0}
+    trait: {fileID: 0}
+  - chosenAnimation: {fileID: 0}
+    item: {fileID: 0}
+    trait: {fileID: 0}
