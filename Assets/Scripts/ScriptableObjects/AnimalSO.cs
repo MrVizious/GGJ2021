@@ -11,11 +11,11 @@ public class AnimalSO : ScriptableObject
 
     public AnimationClip getRandomAnimation()
     {
-        return animations[Random.Range(0, animations.Count - 1)];
+        return animations[Random.Range(0, animations.Count)];
     }
 
     public TraitSO getRandomTrait()
     {
-        return traits[Random.Range(0, traits.Count - 1)];
+        return traits[Random.Range(0, traits.Count)];
     }
 }
